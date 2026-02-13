@@ -33,7 +33,7 @@ const AboutSection = () => (
       <ScrollReveal delay={0.35}>
         <div className="grid grid-cols-3 gap-8 pt-6 border-t border-border">
           {[
-            { number: "6+", label: "Years Experience" },
+            { number: "2+", label: "Years Experience" },
             { number: "40+", label: "Projects Delivered" },
             { number: "15+", label: "Happy Clients" },
           ].map((stat) => (
