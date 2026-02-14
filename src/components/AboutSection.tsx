@@ -23,11 +23,11 @@ const AboutSection = () =>
 
       <ScrollReveal delay={0.25}>
         <p className="font-body text-lg text-muted-foreground leading-relaxed mb-10">
-          My approach is research-driven and user-centered. I start by deeply understanding
-          the people I'm designing for, then translate those insights into elegant,
-          scalable solutions. Every pixel, every interaction, every micro-animation
-          serves a purpose.
-        </p>
+          My approach is research driven and user centered. I start by deeply understanding the people I'm designing for, then translate those insights into elegant, scalable solutions. Every pixel, every interaction, every micro animation serves a purpose.
+        
+
+
+      </p>
       </ScrollReveal>
 
       <ScrollReveal delay={0.35}>
