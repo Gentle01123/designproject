@@ -15,19 +15,26 @@ export interface Project {
   };
   solution: string;
   outcomes: string[];
+  gallery?: string[];
 }
 
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
+import nuvraFront from "@/assets/nuvra-front.png";
+import nuvraHome from "@/assets/nuvra-home.png";
+import nuvraEarn from "@/assets/nuvra-earn.png";
+import nuvraHistory from "@/assets/nuvra-history.png";
+import nuvraSwap from "@/assets/nuvra-swap.png";
 
 export const projects: Project[] = [
   {
     id: "nuvra-crypto",
     title: "Nuvra Crypto Wallet",
     description: "A comprehensive crypto wallet and exchange platform with staking, swaps, and transaction history.",
-    thumbnail: project1,
+    thumbnail: nuvraFront,
+    gallery: [nuvraFront, nuvraHome, nuvraEarn, nuvraHistory, nuvraSwap],
     tools: ["Figma", "Protopie", "Principle"],
     overview: "Nuvra is a full-featured cryptocurrency wallet app enabling users to manage digital assets, stake tokens, track transaction history, and exchange currencies — all from a unified mobile and web experience.",
     problem: "Crypto users juggle multiple apps for wallets, exchanges, and staking — leading to fragmented experiences, security concerns, and missed earning opportunities.",
