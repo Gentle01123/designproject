@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowLeft, ArrowRight, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { projects } from "@/data/projects";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -8,6 +9,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 const CaseStudy = () => {
   const { id } = useParams<{ id: string }>();
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const project = projects.find((p) => p.id === id);
   const currentIndex = projects.findIndex((p) => p.id === id);
   const nextProject = projects[(currentIndex + 1) % projects.length];
@@ -63,21 +65,87 @@ const CaseStudy = () => {
           </motion.div>
         </section>
 
-        {/* Hero image */}
+        {/* Hero image / Gallery */}
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
           className="section-padding"
         >
-          <div className="rounded-2xl overflow-hidden shadow-card-hover">
-            <img
-              src={project.thumbnail}
-              alt={project.title}
-              className="w-full h-auto object-cover"
-            />
-          </div>
+          {project.gallery && project.gallery.length > 0 ? (
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+              {project.gallery.map((img, i) => (
+                <div
+                  key={i}
+                  className="rounded-2xl overflow-hidden shadow-card-hover cursor-pointer hover:scale-[1.03] transition-transform duration-300"
+                  onClick={() => setLightboxIndex(i)}
+                >
+                  <img
+                    src={img}
+                    alt={`${project.title} screen ${i + 1}`}
+                    className="w-full h-auto object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="rounded-2xl overflow-hidden shadow-card-hover">
+              <img
+                src={project.thumbnail}
+                alt={project.title}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          )}
         </motion.div>
+
+        {/* Lightbox */}
+        <AnimatePresence>
+          {lightboxIndex !== null && project.gallery && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+              onClick={() => setLightboxIndex(null)}
+            >
+              <button
+                className="absolute top-6 right-6 text-white/70 hover:text-white"
+                onClick={() => setLightboxIndex(null)}
+              >
+                <X size={28} />
+              </button>
+              <button
+                className="absolute left-4 text-white/70 hover:text-white"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setLightboxIndex((lightboxIndex - 1 + project.gallery!.length) % project.gallery!.length);
+                }}
+              >
+                <ChevronLeft size={36} />
+              </button>
+              <motion.img
+                key={lightboxIndex}
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                src={project.gallery[lightboxIndex]}
+                alt={`${project.title} screen ${lightboxIndex + 1}`}
+                className="max-h-[85vh] max-w-[90vw] object-contain rounded-xl"
+                onClick={(e) => e.stopPropagation()}
+              />
+              <button
+                className="absolute right-4 text-white/70 hover:text-white"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setLightboxIndex((lightboxIndex + 1) % project.gallery!.length);
+                }}
+              >
+                <ChevronRight size={36} />
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* Content */}
         <div className="section-padding max-w-3xl mx-auto py-16 md:py-24 space-y-16">
