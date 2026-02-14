@@ -27,6 +27,9 @@ import nuvraHome from "@/assets/nuvra-home.png";
 import nuvraEarn from "@/assets/nuvra-earn.png";
 import nuvraHistory from "@/assets/nuvra-history.png";
 import nuvraSwap from "@/assets/nuvra-swap.png";
+import virrelHero from "@/assets/virrel-hero.png";
+import virrelClothing from "@/assets/virrel-clothing.png";
+import virrelDesign from "@/assets/virrel-design.png";
 
 export const projects: Project[] = [
   {
@@ -132,6 +135,33 @@ export const projects: Project[] = [
       "Online orders increased by 45%",
       "Average session duration: 3.5 minutes",
       "Customer satisfaction score increased from 3.2 to 4.6/5"
+    ]
+  },
+  {
+    id: "virrel-clothing",
+    title: "Virrel Clothing Store",
+    description: "A modern e-commerce fashion platform with curated collections, category browsing, and a customer-first shopping experience.",
+    thumbnail: virrelHero,
+    gallery: [virrelHero, virrelClothing, virrelDesign],
+    tools: ["Figma", "Adobe XD", "Photoshop"],
+    overview: "Virrel is a fashion e-commerce brand website featuring curated collections, category browsing, new arrivals, and a seamless shopping experience with a bold visual identity.",
+    problem: "Many fashion e-commerce sites feel generic and cluttered, making it hard for brands to convey their unique identity while maintaining a smooth shopping experience.",
+    goals: [
+      "Create a visually distinctive brand presence that stands out",
+      "Design intuitive category browsing and product discovery",
+      "Build trust through customer reviews and quality messaging"
+    ],
+    role: "UI/UX Designer responsible for the full e-commerce experience — from hero landing through product browsing, brand storytelling, and newsletter engagement.",
+    process: {
+      research: "Analyzed 10 competitor fashion brands and conducted surveys with 25 online shoppers to understand browsing and purchase behavior.",
+      wireframes: "Created low-fidelity wireframes for 8 key pages including homepage, shop, collections, and product detail. Tested navigation flows with 8 users.",
+      design: "Developed a clean, modern design system with neutral tones, bold typography, and generous whitespace to let product imagery shine."
+    },
+    solution: "A polished e-commerce platform with hero collections, category filters, new arrivals grid, brand value propositions, and integrated customer testimonials.",
+    outcomes: [
+      "Conversion rate increased by 28%",
+      "Average browse time: 4.2 minutes",
+      "Customer satisfaction score of 4.8/5"
     ]
   }
 ];
