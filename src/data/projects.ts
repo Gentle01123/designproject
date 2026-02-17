@@ -116,7 +116,7 @@ export const projects: Project[] = [
     title: "Savor Restaurant",
     description: "A restaurant ordering platform blending appetizing food photography with a seamless ordering experience.",
     thumbnail: project4,
-    tools: ["Figma", "FigJam", "Lottie"],
+    tools: ["Figma", "FigJam"],
     overview: "Savor is a restaurant website combining editorial food photography with a frictionless online ordering and menu browsing experience.",
     problem: "Restaurant websites often feel generic and fail to showcase food quality, leading to low online order conversion and high bounce rates.",
     goals: [
