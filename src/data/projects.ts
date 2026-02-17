@@ -90,7 +90,7 @@ export const projects: Project[] = [
     title: "Ocean Escape",
     description: "A luxury yacht charter booking platform with an emphasis on visual storytelling and seamless reservations.",
     thumbnail: project3,
-    tools: ["Figma", "FigJam", "Maze"],
+    tools: ["Figma", "FigJam"],
     overview: "Ocean Escape streamlines luxury yacht charter bookings with stunning visuals, social proof, and an intuitive reservation flow.",
     problem: "Luxury charter booking sites felt outdated and complex, failing to convey the premium experience or simplify the reservation process.",
     goals: [
