@@ -64,7 +64,7 @@ export const projects: Project[] = [
     title: "GameVault Landing",
     description: "A bold gaming store landing page designed to maximize engagement and drive conversions.",
     thumbnail: project2,
-    tools: ["Figma", "Adobe XD", "Hotjar"],
+    tools: ["Figma", "Adobe XD"],
     overview: "GameVault is a premium gaming storefront landing page designed to immerse players in featured titles while driving purchases and engagement.",
     problem: "Existing gaming storefronts felt cluttered and generic, failing to create excitement around featured titles or drive immediate action.",
     goals: [
