@@ -38,7 +38,7 @@ export const projects: Project[] = [
     description: "A comprehensive crypto wallet and exchange platform with staking, swaps, and transaction history.",
     thumbnail: nuvraFront,
     gallery: [nuvraFront, nuvraHome, nuvraEarn, nuvraHistory, nuvraSwap],
-    tools: ["Figma", "Figjam"],
+    tools: ["Figma", "FigJam"],
     overview: "Nuvra is a full-featured cryptocurrency wallet app enabling users to manage digital assets, stake tokens, track transaction history, and exchange currencies — all from a unified mobile and web experience.",
     problem: "Crypto users juggle multiple apps for wallets, exchanges, and staking — leading to fragmented experiences, security concerns, and missed earning opportunities.",
     goals: [
