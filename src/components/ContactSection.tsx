@@ -37,8 +37,8 @@ const ContactSection = () => {
                 maxLength={100}
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
-                className="w-full bg-background border border-border rounded-xl px-5 py-3.5 font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring/30 transition-shadow"
-              />
+                className="w-full bg-background border border-border rounded-xl px-5 py-3.5 font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring/30 transition-shadow" />
+
               <input
                 type="email"
                 placeholder="Your Email"
@@ -46,8 +46,8 @@ const ContactSection = () => {
                 maxLength={255}
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
-                className="w-full bg-background border border-border rounded-xl px-5 py-3.5 font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring/30 transition-shadow"
-              />
+                className="w-full bg-background border border-border rounded-xl px-5 py-3.5 font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring/30 transition-shadow" />
+
             </div>
             <textarea
               placeholder="Tell me about your project..."
@@ -56,12 +56,12 @@ const ContactSection = () => {
               rows={5}
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
-              className="w-full bg-background border border-border rounded-xl px-5 py-3.5 font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring/30 transition-shadow resize-none"
-            />
+              className="w-full bg-background border border-border rounded-xl px-5 py-3.5 font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring/30 transition-shadow resize-none" />
+
             <button
               type="submit"
-              className="bg-foreground text-background font-display font-semibold text-sm px-10 py-4 rounded-full hover:opacity-90 transition-opacity duration-200"
-            >
+              className="bg-foreground text-background font-display font-semibold text-sm px-10 py-4 rounded-full hover:opacity-90 transition-opacity duration-200">
+
               Send Message
             </button>
           </form>
@@ -70,30 +70,30 @@ const ContactSection = () => {
         <ScrollReveal delay={0.25}>
           <div className="flex items-center gap-6 mt-12 pt-8 border-t border-border">
             <a
-              href="mailto:hello@portfolio.com"
-              className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors font-body text-sm"
-            >
+
+              className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors font-body text-sm" href="mailto:ge">
+
               <Mail size={16} /> hello@portfolio.com
             </a>
             <a
               href="#"
               className="text-muted-foreground hover:text-foreground transition-colors"
-              aria-label="LinkedIn"
-            >
+              aria-label="LinkedIn">
+
               <Linkedin size={18} />
             </a>
             <a
               href="#"
               className="text-muted-foreground hover:text-foreground transition-colors"
-              aria-label="Twitter"
-            >
+              aria-label="Twitter">
+
               <Twitter size={18} />
             </a>
           </div>
         </ScrollReveal>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default ContactSection;
