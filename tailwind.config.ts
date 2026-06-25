@@ -8,16 +8,16 @@ export default {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
+      screens: { "2xl": "1400px" },
     },
     extend: {
       fontFamily: {
-        display: ["Space Grotesk", "sans-serif"],
-        body: ["DM Sans", "sans-serif"],
+        display: ["Syne", "sans-serif"],
+        body: ["Inter", "sans-serif"],
+        mono: ["Syne Mono", "monospace"],
       },
       colors: {
+        // shadcn tokens
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -51,26 +51,21 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-        },
+        // Custom design tokens
+        bg: "#0A0A0F",
+        bg2: "#111118",
+        surface: "#14141C",
+        surface2: "#1C1C28",
+        "border-c": "#2A2A3A",
+        text: "#F0EDE6",
+        "muted-c": "#7A7A8C",
+        lime: "#C8FF00",
+        accent2: "#FF4D6D",
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-      },
-      boxShadow: {
-        card: "var(--shadow-card)",
-        "card-hover": "var(--shadow-card-hover)",
-        soft: "var(--shadow-soft)",
       },
       keyframes: {
         "accordion-down": {
